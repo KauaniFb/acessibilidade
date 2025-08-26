@@ -1,0 +1,325 @@
+/* Variáveis para o style */
+:root {
+    --corprincipal:rgba(241,245,4,0.76);
+    --altocontrastefundo: #000000;
+    --altocontrastetexto: #F70A0A;
+    --altocontrastelink: rgb(0,244,255);
+    --tamanhofontebase: 1rem; 
+   --fontetitulo:font-family: "Monsieur La Doulaise", cursive;
+   --fontecorpo:font-family: "Lavishly Yours", cursive;
+}
+
+/* Corpo e fonte base */
+body {
+    font-size: var(--tamanhofontebase);
+    font-family:"Ribeye", serif;
+    margin: 0;
+    padding: 0;
+    color:purple;
+    
+  }
+
+/* Cabeçalho */
+header {
+    background-color: #BB00FF77;
+}
+
+/* Nav */
+.nav-img {
+    width: 300px;
+}
+
+.nav-link {
+    margin: 10px;
+    background-color: rgb(135,162,250);
+    border-radius: 50px;
+    color: black;
+    font-family:"Ribeye", serif;
+   
+}
+
+.nav-link:hover { /* mouse em cima */
+    background-color:  #8BC34A;
+    color: rgb(247,1,219);
+    box-shadow: 5px 5px 5px rgba(255,194,0,0.75);
+    font-weight: 800;
+}
+
+/* Botões e acessibilidade no nav */
+.menu-acessibilidade {
+position: fixed;
+/* → fixa o elemento na tela, ele NÃO se move quando a página rola */
+top: 2rem;
+/* → distância do topo da janela */
+right: 20px;
+/* → distância da borda direita da janela */
+z-index: 1000;
+/* → define prioridade na sobreposição: 1000 é alto, o elemento fica na frente */
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+/* → o botão começa virado 90 graus pra esquerda, tipo deitado */
+
+transform-origin: right center;
+/* o ponto que o botão gira é a borda direita, no meio da altura. Isso faz ele girar “em torno desse ponto”, tipo uma dobradiça. Então, quando você clica e muda essa rotação, o botão “vira” pra ficar na vertical, bem no meio */
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#botao-acessibilidade, #aumentar-fonte, #diminuir-fonte, #alterna-contraste{
+ background-color: rgba(235,10,143,0.62);
+    border: yellow;
+  font-family: "Ribeye", serif;
+}
+
+/* TROCAR A COR DO MENU ACESSIBILIDADE AO PASSAR O MOUSE NELE */
+#botao-acessibilidade:hover, #aumentar-fonte:hover, #diminuir-fonte:hover, #alterna-contraste:hover{
+  background-color: rgba(4,0,255,0.4);
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+}
+
+.apresenta-lista {
+    display: none;
+}
+
+/* Seção "inicio" */
+section {
+    padding-bottom: 5rem;
+}
+
+.inicio-fundo {
+    background-image: url('fotoinicial.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 80px;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Se estiver em alto contraste, a foto mudará para: */
+body.alto-contraste .inicio-fundo {
+    background-image: url('fotoinicialcontraste.png');
+}
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagem {
+    display: flex;
+    gap: 50px; /* espaço entre */
+    justify-content: center;
+    flex-wrap: wrap; /*  faz com que os elementos dentro quebrem de linha quando não couberem mais na mesma linha, tipo uma frase muito grande. */ 
+}
+
+.imagem img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.display-4 {
+    font-family: "Lavishly Yours", cursive;
+    color: black;
+    text-shadow: -5px 5px var(--corprincipal);
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: calc(var(--tamanhofontebase) * 2.5);
+}
+
+.botao-inicio {
+    background-color:  rgba(208,0,255,0.69);
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    margin-top: 50px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: black;
+    font-weight: bold;
+    font-size: calc(var(--tamanhofontebase) * 1);
+    font-family: "Ribeye", serif;
+}
+
+.botao-inicio:hover {
+    background-color: rgba(247,48,233,0.69);
+    color: var(--corprincipal);
+    box-shadow: 5px 5px 5px rgb(134, 50, 50);
+}
+
+.fonte { /* fonte da imagem */
+    font-size: calc(var(--tamanhofontebase) * 0.6);
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    background-color: rgba(97, 96, 96, 0.54);
+    padding: 5px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-family: "Ribeye", serif;
+}
+
+.fonte a {
+    color: white;
+    text-decoration: none;
+    font-family:"Ribeye", serif;
+}
+
+
+h2 {
+    font-family: "Lavishly Yours", cursive;
+    font-size: calc(var(--tamanhofontebase) * 2.5);
+    font-style: normal;
+    color: var(--corprincipal);
+}
+
+/* Seção "galeria" */
+#galeria {
+    background-color: #A7E1E98C;
+  border-radius: 50px;
+}
+
+.fundo-galeria {
+   background:
+  url('alice.png') bottom right no-repeat,
+  url('srcoelho.png') top left no-repeat;
+background-size: 25px 18px 25px 10px;
+}
+
+/* Imagens da galeria */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  /* defina uma altura se por um acaso suas imagens ficaram muuuito diferentes */
+}
+
+/* Seção "contato" */
+#contato {
+    background-image: url('fundo.png');
+    border-radius: 50px;
+    background-size: cover;
+    padding: 4rem 0;
+    margin-top: 50px;
+}
+
+.formulario {
+    background-color: #FFFFFF00;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: calc(var(--tamanhofontebase) * 1);
+}
+.mb-3{
+  color: black;
+  background-color: rgba(128,0,128,0.8);
+  border-radius: 20px;
+  text-shadow: 2px 2px 2px rgba(223,226,0,0.78);
+  text-align: center;
+}
+
+.formulario button {
+    background-color:rgb(218,52,81);
+    color: purple;
+    border: none;
+    font-weight: bold;
+    font-size: calc(var(--tamanhofontebase) * 1);
+}
+
+.formulario button:hover {
+  background-color: rgb(65,62,62);
+  color: rgb(0,232,255);
+  box-shadow: 5px 5px 5px rgba(0,255,255,0.77);
+}
+.form-control {
+    background-color: #EB4E9C9E;
+    font-size: calc(var(--tamanhofontebase) * 1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-style: italic;
+    color: rgb(206,130,206);
+}
+
+/* Ícones no rodapé */
+.bi {
+    font-size: 1.5rem;
+    margin: 0 5px;
+    color: rgb(245,79,108);
+}
+
+/* Alto contraste (acessibilidade) */
+.alto-contraste {
+    background-color: var(--altocontrastefundo);
+    color: var(--altocontrastetexto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--altocontrastefundo);
+    color: white;
+}
+
+.alto-contraste .nav-link {
+    color: black;
+    background-color:red;
+}
+
+.alto-contraste .nav-link:hover {
+    color:  #960124;
+    font-weight: 800;
+    background-color: rgb(208,0,255);
+    box-shadow: 5px 4px 4px  white;
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button {
+    background-color: rgb(190,3,3);
+    color: goldenrod;
+  box-shadow: 5px 4px 4px whitesmoke;
+}
+
+.alto-contraste .botao-inicio:hover,
+.alto-contraste .formulario button:hover,
+.alto-contraste .btn-primary:hover {
+  background-color:rgb(208,0,255);
+  color: #960124;
+  box-shadow: 5px 5px 5px  white;
+}
+
+.alto-contraste #onedirection {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--altocontrastefundo);
+}
+
+.alto-contraste .fundo-galeria {
+    background: none;
+}
