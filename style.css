@@ -1,9 +1,9 @@
 /* Variáveis para o style */
 :root {
     --corprincipal:rgba(241,245,4,0.76);
-    --altocontrastefundo: #000000;
-    --altocontrastetexto: #F70A0A;
-    --altocontrastelink: rgb(0,244,255);
+    --altocontrastefundo:#000000;
+    --altocontrastetexto:#F70A0A;
+    --altocontrastelink:rgb(0,244,255);
     --tamanhofontebase: 1rem; 
    --fontetitulo:font-family: "Monsieur La Doulaise", cursive;
    --fontecorpo:font-family: "Lavishly Yours", cursive;
@@ -79,7 +79,7 @@ transform-origin: right center;
 
 /* TROCAR A COR DO MENU ACESSIBILIDADE AO PASSAR O MOUSE NELE */
 #botao-acessibilidade:hover, #aumentar-fonte:hover, #diminuir-fonte:hover, #alterna-contraste:hover{
-  background-color: rgba(4,0,255,0.4);
+  background-color: #FFC107;
 }
 
 .opcoes-acessibilidade button {
@@ -140,11 +140,13 @@ body.alto-contraste .inicio-fundo {
 
 .display-4 {
     font-family: "Lavishly Yours", cursive;
-    color: black;
-    text-shadow: -5px 5px var(--corprincipal);
+    color: rgb(182,2,177);
+    text-shadow: -5px 5px rgb(0,233,255);
     text-align: center;
     margin-bottom: 50px;
     font-size: calc(var(--tamanhofontebase) * 2.5);
+    background-color: rgb(247,247,121);
+   border-radius: 20px;
 }
 
 .botao-inicio {
@@ -154,7 +156,7 @@ body.alto-contraste .inicio-fundo {
     width: 14em;
     height: 3em;
     margin-top: 50px;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    box-shadow: 5px 5px 5px  rgb(0, 0, 0);
     color: black;
     font-weight: bold;
     font-size: calc(var(--tamanhofontebase) * 1);
@@ -162,9 +164,9 @@ body.alto-contraste .inicio-fundo {
 }
 
 .botao-inicio:hover {
-    background-color: rgba(247,48,233,0.69);
-    color: var(--corprincipal);
-    box-shadow: 5px 5px 5px rgb(134, 50, 50);
+    background-color:  #8BC34A;
+    color: rgb(241,24,172);
+    box-shadow: 5px 5px 5px  #FFC107;
 }
 
 .fonte { /* fonte da imagem */
@@ -172,7 +174,7 @@ body.alto-contraste .inicio-fundo {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 20px;
-    background-color: rgba(97, 96, 96, 0.54);
+    background-color: rgba(164,23,241,0.75);
     padding: 5px;
     border-radius: 50px;
     color: white;
@@ -203,8 +205,8 @@ h2 {
 .fundo-galeria {
    background:
   url('alice.png') bottom right no-repeat,
-  url('srcoelho.png') top left no-repeat;
-background-size: 25px 18px 25px 10px;
+  url('risonho.png') top left no-repeat;
+background-size: 150px 180px, 150px 100px;
 }
 
 /* Imagens da galeria */
@@ -269,7 +271,7 @@ footer {
 .bi {
     font-size: 1.5rem;
     margin: 0 5px;
-    color: rgb(245,79,108);
+    color: rgb(245,28,245);
 }
 
 /* Alto contraste (acessibilidade) */
@@ -312,14 +314,17 @@ footer {
   box-shadow: 5px 5px 5px  white;
 }
 
-.alto-contraste #onedirection {
+.alto-contraste #aliceinwonderland {
     background: none;
 }
 
 .alto-contraste #galeria {
-    background-color: var(--altocontrastefundo);
+    background: rgba(255,62,62,0.77);
 }
 
 .alto-contraste .fundo-galeria {
-    background: none;
+       background:
+  url('alice.png') bottom right no-repeat,
+  url('risonho.png') top left no-repeat;
+background-size: 150px 180px, 150px 100px;
 }
